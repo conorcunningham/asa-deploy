@@ -1,0 +1,16 @@
+{
+    "hostname": "bob",
+    "fqdn": "fw.bobs-domain.com",
+    "domain_name": "bobs-domain",
+    "enable_pw": "enable123",
+    "outside_ip": "1.1.1.1",
+    "outside_netmask": "255.255.255.252",
+    "inside_ip": "192.168.1.1",
+    "inside_network": "192.168.1.0",
+    "inside_netmask": "255.255.255.0",
+    "inet_gateway": "1.1.1.2",
+    "dns_server": "8.8.8.8",
+    "dhcp_start": "192.168.1.100",
+    "dhcp_end": "192.168.1.200",
+    "admin_password": "a_super_secure_password_should_be_here"
+}
