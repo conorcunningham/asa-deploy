@@ -1,6 +1,21 @@
 # Cisco ASA Configuration Tool
 This tool will read a JSON configuration file and a base configuration template and then produce a valid configuration which can be pasted into a **NEW!** Cisco ASA 5506 device. **This tool is only meant to work with a default ASA 5506 configuration. Do not use with a production system!**
 
+## Usage
+To use the tool, ensure that [asa-deploy.py](asa-deploy.py), [base-config.txt](base-config.txt) and [asa-config.json](asa-config.json) are all in the same directory. 
+#### Then run 
+``` python asa-deploy.py ```
+
+The result will be a file named ```outlook.txt```. It is the contents of this file that can be pasted into the new ASA 5506.
+
+## What the tool does
+The tool very simply does the following
+- Creates an outside interface with supplied IP information
+- Creates an inside interface with supplied IP information 
+- Allows inside traffic to go to the internet
+- Allows HTTPS and SSH administration of the box from the inside IP address
+- Adds a admin user with supplied password.
+
 ## Configuration
 The program reads from a JSON file. Here is the example config file.
 ```json
@@ -28,9 +43,3 @@ All of these parameters must be filled out, otherwise there will be errors in th
 ```
 The ```inside_ip``` is the IP address of the ASA's inside interface. The ```inside_network``` is the network address of the network on which the ASA's inside interface resides. Note that the only difference between the two here is that the inside_network has a _**0**_ as the last digit where the inside_ip has a _**1**_. In almost all cases, the inside_network address will end with a _**0**_
 
-## Usage
-To use the tool, ensure that [asa-deploy.py](asa-deploy.py), [base-config.txt](base-config.txt) and [asa-config.json](asa-config.json) are all in the same directory. 
-###### Then run 
-``` python asa-deploy.py ```
-
-The result will be a file named ```outlook.txt```. It is the contents of this file that can be pasted into the new ASA 5506.
