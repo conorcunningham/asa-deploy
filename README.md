@@ -29,6 +29,8 @@ All of these parameters must be filled out, otherwise there will be errors in th
 The ```inside_ip``` is the IP address of the ASA's inside interface. The ```inside_network``` is the network address of the network on which the ASA's inside interface resides. Note that the only difference between the two here is that the inside_network has a _**0**_ as the last digit where the inside_ip has a _**1**_. In almost all cases, the inside_network address will end with a _**0**_
 
 ## Usage
-To use the tool, ensure that (asa-deploy.py)[asa-deploy.py], (base-config.txt)[base-config.txt] and (asa-config.json)[asa-config.json] are all in the same directory. 
-Then run ``` python asa-deploy.py ```
+To use the tool, ensure that [asa-deploy.py](asa-deploy.py), [base-config.txt](base-config.txt) and [asa-config.json](asa-config.json) are all in the same directory. 
+###### Then run 
+``` python asa-deploy.py ```
+
 The result will be a file named ```outlook.txt```. It is the contents of this file that can be pasted into the new ASA 5506.
