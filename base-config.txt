@@ -80,4 +80,3 @@ dhcpd domain DOMAIN_NAME interface inside
 dhcpd enable inside
 !
 username admin password ADMIN_PASSWORD privilege 15
-username conor password $sha512$5000$NNYF3CdJgHpiyN6b26YMjg==$ocWtwDeXMyowJxygAutGNA== pbkdf2 privilege 15
